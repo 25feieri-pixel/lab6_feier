@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторна робота №6 — Варіант 26</title>
+</head>
+<body>
+
+    <h1>Лабораторна робота №6</h1>
+    <h2>Тема: Розміщення зображень та медіа контенту на веб-сторінці. Створення форм на веб-сторінці</h2>
+
+    <hr>
+
+    <!-- 1. Розміщення зображення -->
+    <section>
+        <h3>1. Зображення туру</h3>
+        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" 
+             alt="Тропічний тур на море" 
+             width="500" 
+             height="320" 
+             title="Гарячий тур: Тропічний рай">
+    </section>
+
+    <hr>
+
+    <!-- 2. Розміщення аудіо -->
+    <section>
+        <h3>2. Фоновий аудіосупровід (Звуки океану)</h3>
+        <audio controls loop>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Ваш браузер не підтримує елемент аудіо.
+        </audio>
+    </section>
+
+    <hr>
+
+    <!-- 3. Розміщення відео -->
+    <section>
+        <h3>3. Відеопрезентація туру</h3>
+        <video width="500" height="300" controls poster="https://images.unsplash.com/photo-1507525428034-b723cf961d3e">
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Ваш браузер не підтримує елемент відео.
+        </video>
+    </section>
+
+    <hr>
+
+    <!-- 4. Форма бронювання туру (Індивідуальне завдання 26) -->
+    <section>
+        <h3>4. Форма бронювання туру</h3>
+        <form action="submit_booking.php" method="post">
+            
+            <p>
+                <label for="fullname">ПІБ клієнта:</label><br>
+                <input type="text" id="fullname" name="fullname" placeholder="Іванов Іван Іванович" required>
+            </p>
+
+            <p>
+                <label for="phone">Номер телефону:</label><br>
+                <input type="tel" id="phone" name="phone" placeholder="+380XXXXXXXXX" required>
+            </p>
+
+            <p>
+                <label for="email">Електронна пошта:</label><br>
+                <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+            </p>
+
+            <p>
+                <label for="tour_type">Оберіть напрямок туру:</label><br>
+                <select id="tour_type" name="tour_type">
+                    <option value="egypt">Єгипет (Шарм-ель-Шейх)</option>
+                    <option value="turkey">Туреччина (Анталія)</option>
+                    <option value="greece">Греція (о. Крит)</option>
+                    <option value="maldives">Мальдіви</option>
+                </select>
+            </p>
+
+            <p>
+                <label for="guests">Кількість осіб:</label><br>
+                <input type="number" id="guests" name="guests" min="1" max="10" value="2">
+            </p>
+
+            <p>
+                <label for="start_date">Дата вильоту:</label><br>
+                <input type="date" id="start_date" name="start_date">
+            </p>
+
+            <p>
+                <label for="wishes">Додаткові побажання до бронювання:</label><br>
+                <textarea id="wishes" name="wishes" rows="4" cols="50" placeholder="Вкажіть побажання щодо готелю, харчування тощо..."></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Забронювати тур</button>
+                <button type="reset">Очистити форму</button>
+            </p>
+
+        </form>
+    </section>
+
+</body>
+</html>
